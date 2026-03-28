@@ -1,0 +1,8 @@
+{
+	"appId": "com.successpolaris.app",
+	"appName": "SuccessPolaris",
+	"webDir": "dist",
+	"server": {
+		"androidScheme": "https"
+	}
+}

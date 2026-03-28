@@ -1,0 +1,46 @@
+========================================
+  SUCCESSPOLARIS — PROJET ANDROID
+  Prêt à compiler en APK
+========================================
+
+PRÉREQUIS
+---------
+- Android Studio (gratuit) : https://developer.android.com/studio
+  Téléchargez et installez-le sur votre ordinateur.
+
+ÉTAPES DE COMPILATION
+----------------------
+
+1. Extrayez ce dossier "android/" sur votre ordinateur
+
+2. Ouvrez Android Studio
+   → Cliquez "Open"
+   → Sélectionnez le dossier "android/" extrait
+
+3. Attendez la synchronisation Gradle (automatique, ~2-5 min)
+   → En bas de l'écran vous verrez "Gradle sync"
+
+4. Compilez l'APK de debug (pour tester) :
+   → Menu : Build → Build Bundle(s)/APK(s) → Build APK(s)
+   → Attendez la compilation (~1-3 min)
+   → Un message "Build successful" apparaîtra
+
+5. Trouvez votre APK :
+   → android/app/build/outputs/apk/debug/app-debug.apk
+   → Ou cliquez "locate" dans le message de succès
+
+6. Installez l'APK sur votre téléphone Android :
+   → Activez "Sources inconnues" dans les paramètres Android
+   → Transférez le fichier .apk sur votre téléphone
+   → Appuyez dessus pour installer
+
+----------------------------------------
+INFOS TECHNIQUE
+----------------------------------------
+App ID     : com.successpolaris.app
+App Name   : SuccessPolaris
+Version    : 1.0
+Min Android: Android 6.0 (API 23)
+Target     : Android 15 (API 35)
+Framework  : Capacitor 7 (WebView natif)
+----------------------------------------

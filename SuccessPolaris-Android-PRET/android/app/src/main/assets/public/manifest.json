@@ -1,0 +1,33 @@
+{
+  "name": "SuccessPolaris - Astral Palace",
+  "short_name": "SuccessPolaris",
+  "description": "SuccessPolaris - Votre assistant intelligent personnel. Explorez avec Astarté, l'assistant Polaris.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#00d4ff",
+  "orientation": "any",
+  "scope": "/",
+  "lang": "fr",
+  "categories": ["education", "productivity"],
+  "icons": [
+    {
+      "src": "/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ]
+}

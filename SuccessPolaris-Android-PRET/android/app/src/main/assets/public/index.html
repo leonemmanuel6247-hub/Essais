@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SuccessPolaris - Astral Palace</title>
+    <meta name="description" content="SuccessPolaris - Votre assistant intelligent personnel.">
+    <meta property="og:title" content="SuccessPolaris - Astral Palace">
+    <meta property="og:description" content="Explorez avec Astarté, l'assistant Polaris.">
+    <meta property="og:type" content="website">
+
+    <!-- PWA Meta -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="SuccessPolaris">
+    <meta name="theme-color" content="#00d4ff">
+    <meta name="msapplication-TileColor" content="#020617">
+
+    <!-- PWA Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #020617;
+            color: #e2e8f0;
+            margin: 0;
+            overflow-x: hidden;
+            text-shadow: 0 0 8px rgba(0, 212, 255, 0.3);
+        }
+        h1, h2, h3, .text-cyan-400, .text-[#0ff0fc] {
+            text-shadow: 0 0 12px rgba(0, 212, 255, 0.6), 0 0 2px rgba(0, 212, 255, 0.8);
+        }
+        #root { min-height: 100vh; position: relative; z-index: 10; }
+        
+        #loader {
+            position: fixed;
+            inset: 0;
+            background: #000;
+            z-index: 99999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .stellar-phenomenon {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .stellar-core {
+            width: 60px;
+            height: 60px;
+            background: #00d4ff;
+            border-radius: 50%;
+            box-shadow: 
+                0 0 30px #00d4ff,
+                0 0 60px rgba(0, 212, 255, 0.5),
+                inset 0 0 15px #fff;
+            animation: core-pulse 1.5s ease-in-out infinite;
+            z-index: 10;
+        }
+
+        .stellar-ring {
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid rgba(0, 212, 255, 0.2);
+        }
+
+        .ring-1 { width: 120px; height: 120px; animation: rotate-linear 4s linear infinite; border-top-color: #00d4ff; }
+        .ring-2 { width: 180px; height: 180px; animation: rotate-reverse 8s linear infinite; border-right-color: #3b82f6; }
+        .ring-3 { width: 240px; height: 240px; animation: rotate-linear 12s linear infinite; border-bottom-color: #00d4ff; border-style: dashed; }
+
+        .loader-title {
+            margin-top: 4rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1.5em;
+            color: #fff;
+            font-size: 18px;
+            text-shadow: 0 0 20px #00d4ff;
+        }
+
+        /* Offline banner */
+        #offline-banner {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 99998;
+            background: linear-gradient(90deg, #0a0a2a, #1e3a5f);
+            border-bottom: 1px solid rgba(0, 212, 255, 0.3);
+            padding: 10px 20px;
+            text-align: center;
+            color: #00d4ff;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+        #offline-banner.visible { display: block; }
+
+        @keyframes core-pulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 30px #00d4ff; }
+            50% { transform: scale(1.1); box-shadow: 0 0 50px #00d4ff; }
+        }
+        @keyframes rotate-linear { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        @keyframes rotate-reverse { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }
+    </style>
+  <script type="module" crossorigin src="/assets/index-D6sYlJDp.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/vendor-j2mp3VYR.js">
+</head>
+<body>
+    <!-- Offline Banner -->
+    <div id="offline-banner">
+        <i class="fas fa-satellite-dish" style="margin-right:8px;"></i>
+        Mode Hors Ligne — Données chargées depuis le cache local
+    </div>
+
+    <div id="loader">
+        <div class="stellar-phenomenon">
+            <div class="stellar-ring ring-1"></div>
+            <div class="stellar-ring ring-2"></div>
+            <div class="stellar-ring ring-3"></div>
+            <div class="stellar-core"></div>
+        </div>
+        <div class="loader-title">SUCCESS POLARIS</div>
+    </div>
+    <div id="root"></div>
+
+
+    <script>
+        // Offline detection
+        function updateOnlineStatus() {
+            const banner = document.getElementById('offline-banner');
+            if (!navigator.onLine) {
+                banner.classList.add('visible');
+            } else {
+                banner.classList.remove('visible');
+            }
+        }
+        window.addEventListener('online', updateOnlineStatus);
+        window.addEventListener('offline', updateOnlineStatus);
+        updateOnlineStatus();
+    </script>
+</body>
+</html>
